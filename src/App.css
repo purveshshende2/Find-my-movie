@@ -1,38 +1,98 @@
 .App {
   text-align: center;
+  background-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-left: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+.add-movies {
+  text-align: center;
+}
+
+.add-movies button {
+  font-size: 16px;
+  padding: 8px;
+  margin: 0 10px 30px 10px;
+}
+
+.movie {
+  padding: 5px 25px 10px 25px;
+  max-width: 25%;
+  color: #000;
+
+}
+
+.errorMessage {
+  margin: auto;
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+}
+
+.search {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 50px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+input[type="submit"] {
+  padding: 5px;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid;
+  width: 100px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type="submit"]:hover {
+  background-color: #000;
+  color: antiquewhite;
+}
+
+.search > input[type="text"]{
+  width: 60%;
+  min-width: 170px;
+}
+
+@media screen and (min-width: 694px) and (max-width: 915px) {
+  .movie {
+    max-width: 33%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 652px) and (max-width: 693px) {
+  .movie {
+    max-width: 50%;
   }
+}
+
+@media screen and (max-width: 651px) {
+  .movie {
+    max-width: 100%;
+    margin: auto;
+  }
+}
+
+.one:hover{
+  background-color:#cceabb;
+  border-radius: 3%;
+}
+.mylogo{
+  margin-left: 0;
+  color: #fff;
+  text-decoration: none;
 }

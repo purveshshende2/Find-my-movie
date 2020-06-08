@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+    .search, .search input[type=text] {
+ 
+      width: 100%;
+      align-items: center;      
+    }
+    
+    }
+  
+
+  .search input[type=search] {
+    border: none;
+  }
