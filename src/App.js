@@ -15,9 +15,9 @@ const App = () => {
   
 
 
-  // const refreshPage = () => {
-  //   window.location.reload();
-  // };
+  const refreshPage = () => {
+    window.location.reload();
+  };
 
   const search = searchValue => {
     dispatch({
@@ -49,7 +49,6 @@ const App = () => {
       <div className = 'f1 center'>
             <h4 className = 'f2 center'>Find your favorite Movies</h4>
             <img src = {find} className = 'w-50' alt='movie'/>
-            <h4 className = 'f4 center'>Made with ❤ By <a href = 'https://www.instagram.com/coder_purvesh/' className = 'no-underline '>Coder_purvesh</a></h4>
       </div>
       ) : errorMessage ? (
       <div className="errorMessage">{errorMessage}</div>
@@ -67,7 +66,7 @@ const App = () => {
   return (
     <div className="App">
        <div className="m-container">
-        <Header/>
+        <Header onclick = {refreshPage}/>
         <Search search={search} />
         <div className="movies">{retrievedMovies}</div>
       </div>
